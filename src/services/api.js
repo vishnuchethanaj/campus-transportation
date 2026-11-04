@@ -1,0 +1,2 @@
+import {buses,routes,students,seats,payments,notifications,history,passes,studentUser} from '../data/mockData';
+export const api={login:async(email,password)=>({email,password}),register:async(data)=>data,getStudent:async()=>studentUser,getBuses:async()=>buses,getRoutes:async()=>routes,getSeats:async()=>seats,getPayments:async()=>payments,getNotifications:async()=>notifications,getTransportationHistory:async()=>history,verifyPass:async(id)=>passes.find(p=>p.id===id)||null,updateSeat:async(id)=>({seat:id}),assignBus:async(id)=>({bus:id}),assignRoute:async(id)=>({route:id})};
